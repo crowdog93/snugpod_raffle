@@ -18,17 +18,17 @@
    </div>
 </div>
 <div class="raffle_enteries"
-  <table id="entry_table" class="table table-hover table-dark">
+  <table id="entry_table" class="table table-striped table-bordered table-hover">
     <thead>
-      <tr>
+      <tr id="raffle_header_row">
         <th scope="col">Gamer Tag</th>
         <th scope="col">Enteries</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td></td>
-        <td></td>
+        <td id="gamerTagTable"></td>
+        <td id="enteriesTable"></td>
       </tr>
     </tbody>
   </table>
@@ -37,8 +37,7 @@
 
 </form>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 <script type="text/javascript">
 
 document.getElementById("submit_entry").onclick=function()
