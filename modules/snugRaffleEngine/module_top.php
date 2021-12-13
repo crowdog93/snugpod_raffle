@@ -1,7 +1,8 @@
 <?php
 
 //check access
-if($app_user['group_id']>0)
+$access = array("6", "15", "5");
+if(in_array($app_user['group_id'], $access))
 {
   redirect_to('dashboard/access_forbidden');
 }

@@ -1,16 +1,8 @@
 <?php
 
-//Only admin will see this link
-if($app_user['group_id']==0)
+//Only snug admin will see this link 4,12,16
+$access = array("4", "12", "16","0");
+if(in_array($app_user['group_id'], $access))
 {
   $app_plugin_menu['menu'][] = array('title'=>'Snugpod Raffle','url'=>url_for('raffle/snugRaffleEngine/index'),'class'=>'fa-ticket');
 }
-
-/*
-$app_plugin_menu['reports'][] = array('title'=>TEXT_PLUGIN_HELLO_WORLD,'url'=>url_for('hello/my_page/index'),'class'=>'fa-anchor');
-$app_plugin_menu['account_menu'][] = array('title'=>TEXT_PLUGIN_HELLO_WORLD,'url'=>url_for('hello/my_page/index'),'class'=>'fa-anchor');
-
-$s = array();
-$s[] = array('title'=>TEXT_PLUGIN_HELLO_WORLD,'url'=>url_for('hello/my_page/index'),'class'=>'fa-anchor');
-$app_plugin_menu['menu'][] = array('title'=>TEXT_PLUGIN_HELLO_WORLD,'url'=>url_for('hello/my_page/index'),'class'=>'fa-anchor','submenu'=>$s);
-*/
