@@ -6,4 +6,4 @@ echo '<a class="btn btn-primary" href="javascript: open_dialog(\'' . url_for('ra
 
 echo '<hr>';
 
-echo  snugpod_core_raffle_class::get_user_info();
+echo  snugpod_core_raffle_class::active_raffle_data();

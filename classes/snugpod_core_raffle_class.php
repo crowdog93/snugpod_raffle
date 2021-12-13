@@ -2,20 +2,16 @@
 
 class snugpod_core_raffle_class
 {
-  static function get_user_info()
+  static function active_raffle_data()
   {
     global $app_user;
 
-    $html = '';
-    $html .=  '<div>Snugpod User: <b>' . $app_user['id'] . '</b></div>';
-    $html .= '<div>User roles assigned to you: <b>' . $app_user['group_id'] . '</b></div>';
-
-    $user_info_query = db_query("select * from app_entity_1 where id='" . $app_user['id'] . "'");
-    if($user_info = db_fetch_array($user_info_query))
+    $active_raffle_query = db_query("select * from app_entity_22 where field_342='327'");
+    if($active_raffle = db_fetch_array($active_raffle_query))
     {
-      $html .= '<div>Snugpod User: <b>' . $user_info['field_12'] . '</b></div>';
+      $raffle_output = '<div>Raffle:<b>' . $active_raffle['field_168'] . '</b></div>';
     }
 
-    return $html;
+    return $raffle_output;
   }
 }
